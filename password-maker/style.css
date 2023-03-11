@@ -14,19 +14,31 @@ body {
   user-select: none;
 }
 .app {
-  background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+  background-image: linear-gradient(to right, #ff758c89 0%, #ff7eb3 100%);
   margin: 0 10px;
   padding: 24px 10px 10px;
   border-radius: 16px;
   width: 90%;
   max-width: 600px;
   box-shadow: 3px 4px 10px 0px #a76666c2;
+  transition: 0.3s ease-in-out;
+}
+
+.app:hover {
+  transform: scale(1.2);
 }
 #password-output {
   background: transparent;
   border: none;
   font-size: 1.5rem;
   width: 100%;
+  color: #f2f3ef;
+  user-select: red;
+}
+
+#password-output::selection {
+  background: #96e6a1;
+  color: rgb(43, 42, 42);
 }
 .range-container {
   margin: 20px 0;
@@ -69,6 +81,7 @@ input[type="range"]::-webkit-slider-thumb:active {
   width: 30px;
   background: transparent;
   border: none;
+  color: #f2f3ef;
 }
 .checkbox-container {
   margin: 36px 0 25px;
